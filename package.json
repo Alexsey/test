@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "*",
+    "async": "*",
+    "cheerio": "*",
+    "lodash": "*",
+    "request": "*",
+    "moment": "*"
+  }
+}
