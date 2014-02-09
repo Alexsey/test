@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Test application for OneTwoTrip</title>
+
+    <link rel="stylesheet" href="lib/jquery-ui-custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+
+    <script type="application/javascript" src="lib/jquery.js"></script>
+    <script type="application/javascript" src="lib/jquery-ui-custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="application/javascript" src="lib/lodash.js"></script>
+
+    <script type="application/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <form id="input_form">
+        IATA код аэропорта <input id="airport-field" type="text" name="airport"/>
+        <input type="radio" name="schedule_type" value="arrivals"> Вылет
+        <input type="radio" name="schedule_type" value="departures"> Прилет
+        <br>
+        Код авиакомпании (опционально) <input id="airline-field" type="text" name="airline"/>
+        <input type="submit" value="Искать">
+    </form>
+</body>
+
+</html>

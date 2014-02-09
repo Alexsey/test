@@ -1,8 +1,24 @@
-var http = require('http');
+var http = require('http')
 
-var server = http.createServer(function (request, response) {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end('Случай в театре. Спектакль для детей. Момент, где вот-вот должен появиться главный злодей - свет выключен, оркестр настороженно так жужжит. в зале тишина. И тут такой тоненький детский голосок: "Еб твою мать! Страшно-то как!!!\n');
-});
+var _ = new require('lodash')
+var express = require('express')
+var app = express()
+var cheerio = require('cheerio')
 
-server.listen(80);
+var scheduleUrlTemplate = _.template(
+  'http://www.flightstats.com/go/FlightStatus/flightStatusByAirport.do' + '?' +
+  'airport=' + '<%= airport %>' + '&' +
+  'airportQueryDate=' + '<%=%>' + '&' +
+  'airportQueryTime=' + '<%=%>' + '&' +
+  'airlineToFilter=' + '<%= airline || "" %>' + '&' +
+  'airportQueryType=' + '<%= scheduleType == "departures" ? 0 : 1 %>' + '&'
+)
+
+app.use(express.static(__dirname + '/public'))
+app.get('/submit', function (req, res) {
+  var input = req.query
+  console.log(input)
+  res.end('ololo')
+})
+
+app.listen(8000)
