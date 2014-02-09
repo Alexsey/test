@@ -5,14 +5,14 @@ var express = require('express')
 var app = express()
 var cheerio = require('cheerio')
 
-var scheduleUrlTemplate = _.template(
-  'http://www.flightstats.com/go/FlightStatus/flightStatusByAirport.do' + '?' +
-  'airport=' + '<%= airport %>' + '&' +
-  'airportQueryDate=' + '<%=%>' + '&' +
-  'airportQueryTime=' + '<%=%>' + '&' +
-  'airlineToFilter=' + '<%= airline || "" %>' + '&' +
-  'airportQueryType=' + '<%= scheduleType == "departures" ? 0 : 1 %>' + '&'
-)
+//var scheduleUrlTemplate = _.template(
+//  'http://www.flightstats.com/go/FlightStatus/flightStatusByAirport.do' + '?' +
+//  'airport=' + '<%= airport %>' + '&' +
+//  'airportQueryDate=' + '<%=%>' + '&' +
+//  'airportQueryTime=' + '<%=%>' + '&' +
+//  'airlineToFilter=' + '<%= airline || "" %>' + '&' +
+//  'airportQueryType=' + '<%= scheduleType == "departures" ? 0 : 1 %>' + '&'
+//)
 
 app.use(express.static(__dirname + '/public'))
 app.get('/submit', function (req, res) {
