@@ -1,0 +1,15 @@
+.center
+{
+    margin-top: 50px;
+    display: inline-block;
+}
+
+.error_box
+{
+    font-weight: bold;
+}
+
+#load_animation
+{
+    display: none;
+}
