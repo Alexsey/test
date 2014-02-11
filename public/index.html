@@ -5,6 +5,7 @@
     <title>Test application for OneTwoTrip</title>
 
     <link rel="stylesheet" href="lib/jquery-ui-custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <script type="application/javascript" src="lib/jquery.js"></script>
     <script type="application/javascript" src="lib/jquery-ui-custom/js/jquery-ui-1.10.4.custom.min.js"></script>
@@ -14,14 +15,19 @@
 </head>
 
 <body>
-    <form id="input_form">
-        IATA код аэропорта <input id="airport-field" type="text" name="airport"/>
-        <input type="radio" name="schedule_type" value="arrivals"> Вылет
-        <input type="radio" name="schedule_type" value="departures"> Прилет
-        <br>
-        Код авиакомпании (опционально) <input id="airline-field" type="text" name="airline"/>
-        <input type="submit" value="Искать">
-    </form>
+    <div id="center_content" style="text-align: center;">
+        <form id="input_form" class="center">
+            IATA airport code <input id="airport-field" type="text" name="airport"/>
+            <input type="radio" name="schedule_type" value="departures"> Departures
+            <input type="radio" name="schedule_type" value="arrivals"> Arrivals
+            <br>
+            Airline code (optional) <input id="airline-field" type="text" name="airline"/>
+            <input type="submit" value="Search">
+        </form>
+        <div/>
+        <img src="load-animation.gif" alt="loading..." id="load_animation" class="center"/>
+        <div/>
+    </div>
 </body>
 
 </html>
