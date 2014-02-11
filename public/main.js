@@ -123,7 +123,7 @@ $(document).ready(function () {
       return capitalizeFirstLetter(header)
     });
 
-    var placeIndex = ~headers.indexOf('destination')
+    var placeIndex = ~headers.indexOf('Destination')
       ? headers.indexOf('Destination')
       : headers.indexOf('Origin');
     flights.forEach(function (flight) {
